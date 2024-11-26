@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>BILL SPLITTER</span></h1>
+      <div class="input-section">
+          <div class="input-group">
+            <label for="billAmount">Bill Amount</label>
+            <input min="1" type="number" id="billAmount" placeholder="Enter bill amount(GHS)" />
+          </div>
+          <div class="input-group">
+            <label for="">Type of Tip</label>
+            <div class="tip-field">
+                <input type="radio" id="customTip" name="tipOption" class="tip-input" checked />
+                <label class="tip-label" for="customTip">Custom</label>
+                <input type="radio" id="serviceRating" class="tip-input" name="tipOption" onchange="toggleDivVisibility()" />
+                <label class="tip-label" for="serviceRating">Service Rating</label>
+            </div>
+          </div>
+          <div class="input-group" id="customTipInput">
+            <label for="customTipAmount">Enter your tip amount</label>
+            <input
+              min="0" 
+              type="number"
+              id="customTipAmount"
+              placeholder="Enter tip amount(GHS)" />
+          </div>
+          <div class="input-group" id="serviceRatingInput" style="display: none">
+            <label for="serviceRatingInput">Rate Our Service:</label>
+            <select name="" id="serviceRatingInput">
+              <option value="1">Poor</option>
+              <option value="2">Average</option>
+              <option value="3">Good</option>
+              <option value="4">Excellent</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="splitTip">Number of people to split</label>
+            <input
+            min="1"
+              type="number"
+              id="splitCount"
+              placeholder="Enter number of people" />
+          </div>
+          <div class="input-group">
+            <label for="mealType">Meal Type</label>
+            <select name="" id="mealType">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </div>
+      </div>
+      <div class="result">
+        <h2></h2>
+        <div id="totalAmount"></div>
+        <div id="tipAmount"></div>
+        <div id="amountPerPerson"></div>
+      </div>
+      <div class="buttons">
+        <button id="calculate" onclick="submit()">Calculate</button>
+        <button id="reset" onclick="reset()"> &#8635 </button>
+      </div>
+    </div>
+    <script src="./scipt.js"></script>
+  </body>
+</html>

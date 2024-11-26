@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: #000;
+  --primary-clr: #102754;
+  --secondary-clr: #453cc9;
+  --accent-clr: #a8e0fa;
+  --primary-text: #ffff;
+  --secondary-text: #d4e8ff;
+  --btn-gradient: linear-gradient(
+    336deg,
+    #020024 0%,
+    #08086b 37%,
+    #090979b7 64%,
+    #00d4ff 100%
+  );
+}
+
+@font-face {
+  font-family: split;
+  src: url(./assets/SplitOn.ttf);
+}
+
+@font-face {
+  font-family: lapis;
+  src: url(./assets/Lapis\ W03\ Bold\ Italic.ttf);
+}
+
+body {
+  font-family: lapis;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    300deg,
+    deepskyblue,
+    blue,
+    #000000f3,
+    #100cca,
+    #020127
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  transition: all 0.7s ease-in;
+  max-width: 100%;
+  min-height: 90%;
+  gap: 0.2em;
+}
+
+.container h1 {
+  font-family: split;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: .5rem;
+}
+
+.container .input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background: linear-gradient(120deg, #000000de, #00000094, #000000d5);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  border-radius: 1em;
+  padding: 2em 0.5em;
+  /* font-size: 0.8em; */
+}
+
+.container .input-section .input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.4em;
+}
+
+.container .input-section .tip-field {
+  display: inline-flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container .input-section .tip-field .tip-label {
+  background: var(--primary-clr);
+  width: 305;
+  padding: 0.7rem;
+  border-radius: 0.5em;
+  transition: var(--transition-duration);
+  cursor: pointer;
+  color: var(--primary-text);
+}
+
+.container .input-section .tip-field .tip-label:hover {
+  background: var(--btn-gradient);
+  animation: gradient-animation 2s ease infinite;
+  background-size: 200%;
+}
+
+.container .input-section .tip-field .tip-input:checked + .tip-label {
+  background: var(--btn-gradient);
+}
+
+.container .input-section .tip-field .tip-input {
+  display: none;
+}
+
+.container input {
+  background-color: #0e215762;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--secondary-text);
+}
+
+.container input:focus {
+  border: 1.5px solid var(--secondary-clr);
+  outline: none;
+}
+
+.container select {
+  background-color: #0e215762;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--secondary-text);
+}
+
+.container select:focus {
+  border: 1.5px solid var(--secondary-clr);
+  outline: none;
+}
+
+.container label {
+  color: var(--accent-clr);
+}
+
+.container .result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  background: linear-gradient(120deg, #042b5ede, #00000094, #042b5ede);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  border-radius: 1em;
+  padding: 1em;
+  transition: all 0.7s ease-in;
+  min-height: fit-content;
+}
+
+.container button {
+  background: var(--primary-clr);
+  padding: 0.7rem;
+  border-radius: 1em;
+  transition: var(--transition-duration);
+  cursor: pointer;
+  color: var(--primary-text);
+  border: none;
+  margin: .5em 0;
+}
+
+.container button:hover {
+  background: var(--btn-gradient);
+  animation: gradient-animation 5s ease infinite;
+  background-size: 200%;
+}
+
+#calculate {
+  background: var(--btn-gradient);
+  animation: gradient-animation 5s ease infinite;
+  background-size: 200%;
+  width: 17em;
+}
+
+#calculate:hover {
+  animation: gradient-animation 0.9s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
