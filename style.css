@@ -166,8 +166,12 @@ body {
   width: 100%;
   border-radius: 1em;
   padding: 1em;
-  transition: all 0.7s ease-in;
-  min-height: fit-content;
+  transition: all 0.9s ease-in;
+  /* min-height: fit-content; */
+}
+
+#totalAmount, #tipAmount , #amountPerPerson{
+  padding: .3em 0;
 }
 
 .container button {
