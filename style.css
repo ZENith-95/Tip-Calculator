@@ -10,7 +10,7 @@
   --secondary-clr: #453cc9;
   --accent-clr: #a8e0fa;
   --primary-text: #ffff;
-  --secondary-text: #d4e8ff;
+  --secondary-text: #cce4ff;
   --btn-gradient: linear-gradient(
     336deg,
     #020024 0%,
@@ -40,10 +40,10 @@ body {
   min-height: 100vh;
   background-image: linear-gradient(
     300deg,
-    deepskyblue,
-    blue,
-    #000000f3,
-    #100cca,
+    #022f63,
+    #020246,
+    #101046f3,
+    #05044e,
     #020127
   );
   background-size: 300% 300%;
@@ -65,7 +65,7 @@ body {
   font-family: split;
   letter-spacing: 0.1em;
   font-weight: 600;
-  padding: .5rem;
+  padding: 0.5rem;
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -151,6 +151,14 @@ body {
   outline: none;
 }
 
+.container select option {
+   background-color: #041344;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--secondary-text);
+}
+
 .container label {
   color: var(--accent-clr);
 }
@@ -170,8 +178,10 @@ body {
   /* min-height: fit-content; */
 }
 
-#totalAmount, #tipAmount , #amountPerPerson{
-  padding: .3em 0;
+#totalAmount,
+#tipAmount,
+#amountPerPerson {
+  padding: 0.3em 0;
 }
 
 .container button {
@@ -182,7 +192,7 @@ body {
   cursor: pointer;
   color: var(--primary-text);
   border: none;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 .container button:hover {
